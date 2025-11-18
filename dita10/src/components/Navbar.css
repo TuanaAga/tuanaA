@@ -1,0 +1,24 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+nav{
+    background-color: black;
+    color:azure;
+    padding: lrem;
+}
+nav a{
+    color: azure;
+    text-decoration: none;
+    margin: 0 lrem;
+}
+nav a:hover{
+    text-decoration: underline;
+    color: blueviolet;
+}
+nav.active{
+    font-weight: bold;
+    text-decoration: underline;
+    color: aqua;
+}

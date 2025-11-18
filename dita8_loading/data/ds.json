@@ -1,0 +1,7 @@
+{
+    "list":[
+        {"id": 1, "name":"Tuana" , "age": 14, "city": "Prizren"},
+          {"id": 1, "name":"Arber" , "age": 29, "city": "Prishtine"},
+            {"id": 1, "name":"Ardit" , "age":28, "city": "Peje"}
+    ]
+}

@@ -1,0 +1,141 @@
+/* src/styles.css - thjesht dhe responsiv */
+:root {
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #c79a00;
+  --accent-2: #0b66ff;
+  --success: #0f9d58;
+  --danger: #e53e3e;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #fbfdff, #f3f7fb);
+  color: #0f1724;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-root {
+  max-width: 980px;
+  margin: 28px auto;
+  padding: 20px;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(12, 34, 78, 0.06);
+}
+
+header { text-align: left; margin-bottom: 8px; }
+h1 { margin: 0 0 6px 0; font-size: 20px; }
+.subtitle { margin: 0; color: var(--muted); font-size: 13px; }
+
+main { padding: 16px 0 8px 0; }
+
+.status { padding: 10px 12px; margin-bottom: 12px; background: #fff7e6; border: 1px solid #ffe8a6; border-radius: 8px; color: #6a4300; }
+.status.error { background: #ffecec; border-color: #ffc6c6; color: var(--danger); }
+
+.diagram-root {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.left-column, .right-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+}
+
+.coin-stack {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.coin-stack-item {
+  position: absolute;
+  bottom: 0;
+  transition: transform 300ms ease;
+}
+
+.coin-stack-item:hover {
+  transform: translateY(-8px) scale(1.04);
+  z-index: 10;
+}
+
+.caption { font-size: 13px; color: var(--muted); margin-top: 6px; text-align: center; min-width: 120px; }
+
+.middle-column .arrow {
+  font-size: 44px;
+  color: #c79a00;
+  transform: rotate(0deg);
+  margin: 0 12px;
+}
+
+.blockchain {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.block-rect {
+  width: 110px;
+  height: 68px;
+  background: linear-gradient(180deg, #eaf2ff, #cfe6ff);
+  border: 2px solid #8fb8ff;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(30,80,150,0.06);
+}
+
+.block-label {
+  font-size: 12px;
+  color: #234;
+  margin-top: 8px;
+}
+
+.chain-connector {
+  width: 34px;
+  height: 4px;
+  background: linear-gradient(90deg, #b7d1ff, #e7f0ff);
+  border-radius: 3px;
+}
+
+/* coin svg */
+.btc-coin { display: block; filter: drop-shadow(0 8px 12px rgba(0,0,0,0.08)); }
+
+/* meta */
+.meta {
+  display: flex;
+  gap: 18px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+  color: #374151;
+  font-size: 14px;
+}
+
+.price { font-weight: 700; font-size: 16px; color: #111827; }
+.change.positive { color: var(--success); margin-top: 6px; }
+.change.negative { color: var(--danger); margin-top: 6px; }
+
+.footer { margin-top: 18px; color: var(--muted); }
+
+@media (max-width: 720px) {
+  .diagram-root { flex-direction: column; gap: 16px; align-items: center; }
+  .block-rect { width: 90px; height: 56px; }
+}
